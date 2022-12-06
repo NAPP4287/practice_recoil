@@ -1,5 +1,5 @@
-import { selector, useRecoilValue } from "recoil";
-import { charCountState } from "../recoil/storage";
+import { useRecoilValue } from "recoil";
+import { charCountState } from "../../recoil/storage";
 
 const RecoilCount = () => {
   const count = useRecoilValue(charCountState);

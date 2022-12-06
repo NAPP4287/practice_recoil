@@ -13,3 +13,8 @@ export const charCountState = selector({
     return text.length;
   },
 });
+
+export const todoListState = atom({
+  key: "todoListState",
+  default: ["Recoil 학습하기"],
+});

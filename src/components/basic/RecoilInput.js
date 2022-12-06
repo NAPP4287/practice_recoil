@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useRecoilState, selector, useRecoilValue } from "recoil";
-import { testAtom } from "../recoil/storage";
+import React from "react";
+import { useRecoilState } from "recoil";
+import { testAtom } from "../../recoil/storage";
 
 const RecoilInput = () => {
   const [text, setText] = useRecoilState(testAtom);
