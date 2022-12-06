@@ -4,5 +4,10 @@ export const AlignCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+`;
+
+export const CommonInput = styled.input`
+  width: 500px;
+  height: 30px;
+  box-sizing: border-box;
 `;

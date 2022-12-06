@@ -1,7 +1,11 @@
-import { ToggleWrap } from "../../style/styleToggle";
+import { ToggleWrap, ToggleCircle } from "../../style/styleToggle";
 
 const Toggle = () => {
-  return <ToggleWrap></ToggleWrap>;
+  return (
+    <ToggleWrap>
+      <ToggleCircle></ToggleCircle>
+    </ToggleWrap>
+  );
 };
 
 export default Toggle;

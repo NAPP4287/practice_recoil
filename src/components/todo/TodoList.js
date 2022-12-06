@@ -8,12 +8,19 @@ const TodoList = () => {
   const todoList = useRecoilValue(todoListState);
 
   return (
-    <AlignCenter>
+    <AlignCenter style={{ height: "100vh" }}>
       <div>
-        <TodoCreator />
-        {todoList.map((item, idx) => (
-          <TodoItem key={idx} item={item} />
-        ))}
+        <TodoCreator state={todoListState} />
+        <div
+          style={{
+            backgroundColor: "#EFF5F5",
+            padding: "0 20px",
+            marginTop: "10px",
+          }}>
+          {todoList.map((item, idx) => (
+            <TodoItem key={idx} item={item} />
+          ))}
+        </div>
       </div>
     </AlignCenter>
   );

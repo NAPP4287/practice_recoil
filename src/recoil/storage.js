@@ -16,5 +16,5 @@ export const charCountState = selector({
 
 export const todoListState = atom({
   key: "todoListState",
-  default: ["Recoil 학습하기"],
+  default: [],
 });
