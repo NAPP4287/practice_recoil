@@ -1,8 +1,15 @@
 import Toggle from "./Toggle";
 import { AlignCenter } from "../../style/styleCommon";
+import { useRecoilState } from "recoil";
 
 const TodoItem = (props) => {
-  const { item } = props;
+  const { item, state, idx } = props;
+  const [todoList, setTodoList] = useRecoilState(state);
+
+  const removeList = (index) => {
+    console.log(index);
+    setTodoList([...todoList.slice(0, index), ...todoList.slice(index + 1)]);
+  };
 
   return (
     <AlignCenter style={{ justifyContent: "space-between", padding: "20px 0" }}>
@@ -20,7 +27,8 @@ const TodoItem = (props) => {
             marginRight: "10px",
             fontWeight: "bold",
             cursor: "pointer",
-          }}>
+          }}
+          onClick={() => removeList(idx)}>
           X
         </span>
         <div>{item.text}</div>

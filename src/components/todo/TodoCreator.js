@@ -11,15 +11,11 @@ const TodoCreator = ({ state }) => {
     setInputValue(e.target.value);
   };
 
-  const getId = () => {
-    return setListId(listId + 1);
-  };
-
   const addTodoList = () => {
-    console.log(listId);
+    setListId(listId + 1);
     setChangeTodo((oldList) => [
       ...oldList,
-      { id: getId(), text: inputValue, isComplete: false },
+      { id: listId, text: inputValue, isComplete: false },
     ]);
 
     setInputValue("");

@@ -7,6 +7,8 @@ import { useRecoilValue } from "recoil";
 const TodoList = () => {
   const todoList = useRecoilValue(todoListState);
 
+  console.log(todoList);
+
   return (
     <AlignCenter style={{ height: "100vh" }}>
       <div>
@@ -18,7 +20,7 @@ const TodoList = () => {
             marginTop: "10px",
           }}>
           {todoList.map((item, idx) => (
-            <TodoItem key={idx} item={item} />
+            <TodoItem key={idx} item={item} state={todoListState} />
           ))}
         </div>
       </div>
