@@ -18,7 +18,7 @@ const TodoList = () => {
             marginTop: "10px",
           }}>
           {todoList.map((item, idx) => (
-            <TodoItem key={idx} item={item} state={todoListState} idx={idx} />
+            <TodoItem key={idx} item={item} state={todoListState} />
           ))}
         </div>
       </div>
