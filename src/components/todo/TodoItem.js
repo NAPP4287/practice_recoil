@@ -3,8 +3,9 @@ import { AlignCenter } from "../../style/styleCommon";
 import { useRecoilState } from "recoil";
 
 const TodoItem = (props) => {
-  const { item, state, idx } = props;
+  const { item, state } = props;
   const [todoList, setTodoList] = useRecoilState(state);
+  const idx = todoList.findIndex((listItem) => listItem === item);
 
   const removeList = (index) => {
     setTodoList([...todoList.slice(0, index), ...todoList.slice(index + 1)]);

@@ -1,15 +1,17 @@
 import TodoCreator from "./TodoCreator";
 import TodoItem from "./TodoItem";
+import TodoStatusFilter from "./TodoStatusFilter";
 import { AlignCenter } from "../../style/styleCommon";
-import { todoListState } from "../../recoil/storage";
+import { todoListState, filteredTodoListState } from "../../recoil/storage";
 import { useRecoilValue } from "recoil";
 
 const TodoList = () => {
-  const todoList = useRecoilValue(todoListState);
+  const todoList = useRecoilValue(filteredTodoListState);
 
   return (
     <AlignCenter style={{ height: "100vh" }}>
       <div>
+        <TodoStatusFilter />
         <TodoCreator state={todoListState} />
         <div
           style={{
