@@ -5,8 +5,10 @@ export const ToggleWrap = styled.div`
   height: 10px;
   background-color: #dcdcdc;
   padding: 3px;
+  display: flex;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.5s;
 `;
 
 export const ToggleCircle = styled.div`

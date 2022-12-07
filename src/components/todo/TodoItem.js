@@ -7,7 +7,6 @@ const TodoItem = (props) => {
   const [todoList, setTodoList] = useRecoilState(state);
 
   const removeList = (index) => {
-    console.log(index);
     setTodoList([...todoList.slice(0, index), ...todoList.slice(index + 1)]);
   };
 
@@ -33,7 +32,12 @@ const TodoItem = (props) => {
         </span>
         <div>{item.text}</div>
       </div>
-      <Toggle />
+      <Toggle
+        item={item}
+        setTodoList={setTodoList}
+        todoList={todoList}
+        idx={idx}
+      />
     </AlignCenter>
   );
 };
